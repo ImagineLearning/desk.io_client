@@ -46,6 +46,12 @@ namespace DeskIOLib
 		    var command = Encoding.UTF8.GetBytes("Stop");
 			_deskSocket.Send(command);
 	    }
+
+	    public void Disconnect()
+	    {
+		    _deskSocket.Shutdown(SocketShutdown.Both);
+			_deskSocket.Close();
+	    }
     }
 
 	public enum MovementDirection
