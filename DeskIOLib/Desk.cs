@@ -41,7 +41,7 @@ namespace DeskIOLib
 		    _deskSocket.Send(command);
 	    }
 
-	    private void StopDesk()
+	    public void Stop()
 	    {
 		    var command = Encoding.UTF8.GetBytes("Stop");
 			_deskSocket.Send(command);
